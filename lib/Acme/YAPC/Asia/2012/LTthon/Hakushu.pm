@@ -3,9 +3,16 @@ use 5.008_001;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
+
+use parent qw(Exporter);
+our @EXPORT = qw(hakushu);
 
 use Furl;
+
+sub hakushu {
+   __PACKAGE__->push();
+}
 
 sub push {
     my($class) = @_;
@@ -16,7 +23,7 @@ sub push {
 
     my $res = $ua->post($api, [], [ send => 1 ]);
 
-    print $res->code, "\n";
+    return $res->code;
 }
 
 1;
@@ -28,13 +35,13 @@ Acme::YAPC::Asia::2012::LTthon::Hakushu - tap the "hakushu" (like!) button for Y
 
 =head1 VERSION
 
-This document describes Acme::YAPC::Asia::2012::LTthon::Hakushu version 0.01.
+This document describes Acme::YAPC::Asia::2012::LTthon::Hakushu version 0.02.
 
 =head1 SYNOPSIS
 
     use Acme::YAPC::Asia::2012::LTthon::Hakushu;
 
-    Acme::YAPC::Asia::2012::LTthon::Hakushu->push();
+    my $http_status = hakushu();
 
 =head1 DESCRIPTION
 
@@ -42,9 +49,15 @@ This is an acme module for YAPC::Asia 2012, L<http://yapcasia.org/2012/>.
 
 =head1 INTERFACE
 
+=head2 Functions
+
+=head3 C<< hakushu() >>
+
+Same as the C<< push() >> method.
+
 =head2 Class Methods
 
-=head3 C<< push() >>
+=head3 C<< Acme::YAPC::Asia::2012::LTthon::Hakushu->push() >>
 
 Push the button!
 

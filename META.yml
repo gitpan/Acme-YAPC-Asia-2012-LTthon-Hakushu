@@ -27,5 +27,5 @@ requires:
   perl: 5.8.1
 resources:
   license: http://dev.perl.org/licenses/
-  repository: origin
-version: 0.01
+  repository: git://github.com/gfx/p5-YAPC-Asia-2012-LTthon-Hakushu.git
+version: 0.02
