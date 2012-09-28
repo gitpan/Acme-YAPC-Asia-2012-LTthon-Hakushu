@@ -30,6 +30,7 @@ all_from 'lib/Acme/YAPC/Asia/2012/LTthon/Hakushu.pm';
 test_requires 'Test::More'     => '0.88';
 test_requires 'Test::Requires' => '0.06';
 
+requires 'parent';
 requires 'Furl';
 
 auto_set_repository;

@@ -3,7 +3,7 @@ use 5.008_001;
 use strict;
 use warnings;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use parent qw(Exporter);
 our @EXPORT = qw(hakushu);
@@ -35,7 +35,7 @@ Acme::YAPC::Asia::2012::LTthon::Hakushu - tap the "hakushu" (like!) button for Y
 
 =head1 VERSION
 
-This document describes Acme::YAPC::Asia::2012::LTthon::Hakushu version 0.02.
+This document describes Acme::YAPC::Asia::2012::LTthon::Hakushu version 0.03.
 
 =head1 SYNOPSIS
 
